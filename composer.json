@@ -1,0 +1,29 @@
+{
+  "name": "mingalevme/secure-link-php",
+  "description": "Signing Url",
+  "license": "MIT",
+  "keywords": ["secure-link", "signed-url"],
+  "authors": [
+    {
+      "name": "Mikhail Mingalev",
+      "email": "mingalevme@gmail.com"
+    }
+  ],
+  "require": {
+    "php" : ">=7.0.0",
+    "mingalevme/http-build-url": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mingalevme\\SecureLink\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mingalevme\\Tests\\SecureLink\\": "tests/"
+    }
+  }
+}
