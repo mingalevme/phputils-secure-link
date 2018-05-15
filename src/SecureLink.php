@@ -103,34 +103,4 @@ class SecureLink
     {
         return str_replace(['+', '/'], ['-', '_'], base64_encode($value));
     }
-
-    /**
-     * Decode a string from URL-safe base64
-     *
-     * @param string $value
-     * @return bool|string
-     */
-    protected static function base64UrlDecode($value)
-    {
-        return base64_decode(str_replace(['-', '_'], ['+', '/'], $value));
-    }
-
-    /**
-     * Parse URL and return query string as assoc array
-     *
-     * @param string $url
-     * @return array
-     */
-    protected static function parseQueryStringFromUrl($url)
-    {
-        $query = parse_url($url, PHP_URL_QUERY);
-
-        if (!$query) {
-            return [];
-        }
-
-        parse_str($query, $result);
-
-        return (array) $result;
-    }
 }

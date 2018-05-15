@@ -28,6 +28,12 @@ class SecureLinkTest extends TestCase
         $this->assertSame('https://github.com/mingalevme/secure-link-php?signature=rHCxCclcrmvSBqTuy6DBpg%3D%3D', $signedUrl);
     }
 
+    public function testWithInvalidUrl()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->signer->sign('https://');
+    }
+
     public function testWithQueryArgs()
     {
         $signedUrl = $this->signer->sign('https://github.com/mingalevme/secure-link-php?foo=bar&bar=foo');
@@ -83,5 +89,15 @@ class SecureLinkTest extends TestCase
     {
         $signedUrl = $this->signer->sign('https://github.com/mingalevme/secure-link-php?bar=foo&foo=bar&');
         $this->assertFalse($this->signer->isValid($signedUrl . 'something'));
+    }
+
+    public function testValidationWithoutQueryArgs()
+    {
+        $this->assertFalse($this->signer->isValid('https://github.com/mingalevme/secure-link-php'));
+    }
+
+    public function testValidationWithoutSignature()
+    {
+        $this->assertFalse($this->signer->isValid('https://github.com/mingalevme/secure-link-php?foo=bar&expires=' . (time() + 3600)));
     }
 }
