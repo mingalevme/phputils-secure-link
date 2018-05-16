@@ -1,5 +1,5 @@
 # SecureLink
-Simple HMAC implementation
+Simple HMAC implementation with TTL support for public urls
 
 # Travis CI
 [![Build Status](https://travis-ci.org/mingalevme/secure-link-php.svg?branch=master)](https://travis-ci.org/mingalevme/secure-link-php)
