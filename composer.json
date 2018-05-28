@@ -1,5 +1,5 @@
 {
-  "name": "mingalevme/phputils-secure-link",
+  "name": "mingalevme/utils-secure-link",
   "description": "Signing Url",
   "license": "MIT",
   "keywords": ["secure-link", "signed-url"],
