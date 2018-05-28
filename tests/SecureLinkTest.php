@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Mingalevme\Tests\SecureLink;
+namespace Mingalevme\Tests\Utils\Url\SecureLink;
 
 
-use Mingalevme\SecureLink\SecureLink;
+use Mingalevme\Utils\Url\SecureLink;
 use PHPUnit\Framework\TestCase;
 
 class SecureLinkTest extends TestCase

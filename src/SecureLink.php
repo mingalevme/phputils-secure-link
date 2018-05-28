@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Mingalevme\SecureLink;
+namespace Mingalevme\Utils\Url;
 
 
 class SecureLink

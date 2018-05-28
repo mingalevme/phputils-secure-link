@@ -1,5 +1,5 @@
 {
-  "name": "mingalevme/secure-link-php",
+  "name": "mingalevme/phputils-secure-link",
   "description": "Signing Url",
   "license": "MIT",
   "keywords": ["secure-link", "signed-url"],
@@ -10,20 +10,16 @@
     }
   ],
   "require": {
-    "php" : ">=7.0.0",
-    "mingalevme/http-build-url": "*"
+    "php" : ">=5.4.0",
+    "mingalevme/http-build-url": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~6.0"
   },
   "autoload": {
-    "psr-4": {
-      "Mingalevme\\SecureLink\\": "src"
-    }
+    "classmap": ["src/"]
   },
   "autoload-dev": {
-    "psr-4": {
-      "Mingalevme\\Tests\\SecureLink\\": "tests/"
-    }
+    "classmap": ["tests/"]
   }
 }
