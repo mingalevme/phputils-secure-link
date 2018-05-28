@@ -9,7 +9,7 @@ Simple HMAC implementation with TTL support for public urls
 
 # Installation
 
-1. ```composer require mingalevme/phputils-secure-link-php```.
+1. ```composer require mingalevme/utils-secure-link```.
 
 2. Now you are able to use the tool:
 
