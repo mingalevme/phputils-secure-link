@@ -2,14 +2,14 @@
 Simple HMAC implementation with TTL support for public urls
 
 # Travis CI
-[![Build Status](https://travis-ci.org/mingalevme/secure-link-php.svg?branch=master)](https://travis-ci.org/mingalevme/secure-link-php)
+[![Build Status](https://travis-ci.org/mingalevme/phputils-secure-link.svg?branch=master)](https://travis-ci.org/mingalevme/phputils-secure-link)
 
 # Codecov
-[![codecov](https://codecov.io/gh/mingalevme/secure-link-php/branch/master/graph/badge.svg)](https://codecov.io/gh/mingalevme/secure-link-php)
+[![codecov](https://codecov.io/gh/mingalevme/phputils-secure-link/branch/master/graph/badge.svg)](https://codecov.io/gh/mingalevme/phputils-secure-link)
 
 # Installation
 
-1. ```composer require mingalevme/secure-link-php```.
+1. ```composer require mingalevme/phputils-secure-link-php```.
 
 2. Now you are able to use the tool:
 
@@ -18,7 +18,7 @@ Simple HMAC implementation with TTL support for public urls
 
 const SECRET = 'YOUR_SECRET_KEY';
 
-use Mingalevme\SecureLink\SecureLink;
+use Mingalevme\Utils\Url\SecureLink;
 
 $signer1 = new SecureLink(SECRET);
 
@@ -44,7 +44,7 @@ And validation
 
 const SECRET = 'YOUR_SECRET_KEY';
 
-use Mingalevme\SecureLink\SecureLink;
+use Mingalevme\Utils\Url\SecureLink;
 
 $signer1 = new SecureLink(SECRET);
 
